@@ -18,7 +18,7 @@ function Initialize() {
   return (
     <div className="App">
       <div id="mainContainer">
-        <h2>Jokes!</h2>
+        <h2>Welcome to Jokebox!</h2>
         <h3>{joke.setup}</h3>
         <h4>{ btnText !== 'Get Punchline' ? joke.delivery : ''}</h4>
         <div>
