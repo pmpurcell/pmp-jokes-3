@@ -1,37 +1,16 @@
 import React, { useState } from 'react';
 
 function Initialize() {
-  const [domWriting, setDomWriting] = useState('Nothing Here!');
-
-  const handleClick = (e) => {
-    console.warn(`You clicked ${e.target.id}`);
-    setDomWriting(`You clicked ${e.target.id}! Check the Console!`);
-  };
+  const [btnText, setBtnText] = useState('Get a Joke');
+  console.warn(btnText, setBtnText);
+  const btnFunction = () => { console.warn('Clicked the button!'); };
 
   return (
     <div className="App">
-      <h2>INSIDE APP COMPONENT</h2>
-      <div>
-        <button
-          type="button"
-          id="this-button"
-          className="btn btn-info"
-          onClick={handleClick}
-        >
-          I am THIS button
-        </button>
+      <div id="mainContainer">
+        <h2>Jokes!</h2>
+        <button onClick={btnFunction} type="button" className="btn btn-dark">{btnText}</button>
       </div>
-      <div>
-        <button
-          type="button"
-          id="that-button"
-          className="btn btn-primary mt-3"
-          onClick={handleClick}
-        >
-          I am THAT button
-        </button>
-      </div>
-      <h3>{domWriting}</h3>
     </div>
   );
 }
